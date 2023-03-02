@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-
 <div class="container">
     <div class="row">
         <h1>
@@ -19,7 +18,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <form action="#" th:action="@{/api/user/{id}(id=${user.id})}" method="get">
-                        <button type="submit" class="btn btn-secondary">
+                        <button type="submit" class="btn btn-light">
                             Home
                         </button>
                     </form>
@@ -33,7 +32,7 @@
                 </li>
                 <li class="nav-item">
                     <form action="#" th:action="@{/api/user/{id}/schedule(id=${user.id})}" method="get">
-                        <button type="submit" class="btn btn-light">
+                        <button type="submit" class="btn btn-secondary">
                             Schedule
                         </button>
                     </form>
@@ -69,15 +68,45 @@
             </div>
         </div>
     </nav>
+    <br/>
+    <br/>
 
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-4">Welcome, Ivan Maister</h1>
-            <h3 class="display-5" th:text="${user.firstName + ' ' + user.lastName + ' !'}"></h3>
-        </div>
-    </div>
+    <h3 class="">Spring, Group 2</h3>
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+        <!--        <tr>-->
+        <!--            <th scope="col">#</th>-->
+        <!--            <div th:each = "day : ${days}">-->
+        <!--                <th scope="col" colspan="3" th:text="${day}">day</th>-->
+        <!--            </div>-->
 
-
+        <!--        </tr>-->
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Student</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr> <!--th:each = "slot : ${subjectsSlots}"-->
+            <td>1</td>
+            <td>Ivan Maister</td>
+            <!--            <th scope="row" th:text="${slot[__${0}__].subjectTime}"></th>-->
+            <!--            <div th:each = "subj : ${slot}">-->
+            <!--                <td th:text="${subj.subjectName}">-</td>-->
+            <!--                <td class="text-primary" th:text="${subj.subjectGroup}">-</td>-->
+            <!--                <td th:text="${subj.subjectTeacher?.user?.lastName}">-</td>-->
+            <!--            </div>-->
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Romaniuk Oleksandr</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Zelenskiy Volodymyr</td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 
 </body>
